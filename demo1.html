@@ -1,0 +1,43 @@
+<html>
+<head>
+<script src="vue.js"></script>
+</head>
+<body>
+<div id="demo">
+<h1>{{title | uppercase}}</h1>
+<ul>
+<li v-repeat="todos"
+v-on="click: done = !done"
+class="{{done ? 'done' : ''}}">
+{{content}}
+</li>
+</ul>
+
+</div>
+ 
+</body>
+
+<script>
+ var demo = new Vue({
+ 
+ el:"#demo",
+ data:{
+	title:'todos',
+	todos:[
+	
+	 {
+		done:true,
+		content:'Learn Javascript'
+	 },
+	 {
+		done:false,
+		content:'Learn Vue.js'
+	 }
+	
+	]
+ 
+ }
+ 
+ });
+</script>
+</html>
