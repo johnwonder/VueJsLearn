@@ -1,0 +1,26 @@
+<html>
+<head>
+<script src="vue.js"></script>
+
+
+</head>
+<body>
+<div id="demo">
+   <my-component></my-component>
+
+</div>
+ 
+</body>
+ <script>
+//var alert = VueStrap.alert;
+var MyComponent = Vue.extend({
+  template: '<p>A custom component!</p>',
+  replace:true
+});
+Vue.component('my-component', MyComponent);
+
+var demo = new Vue({
+  el: '#demo'
+});
+</script>
+</html>
