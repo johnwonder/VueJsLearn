@@ -1,0 +1,46 @@
+<html>
+<head>
+<script src="vue.js"></script>
+
+
+</head>
+<body>
+<div id="demo">
+   <my-component></my-component>
+
+<param-demo size="100" my-message="hello!"></param-demo>
+
+<prop-validation-demo size="hello">
+</prop-validation-demo>
+</div>
+ 
+</body>
+ <script>
+var vm = new Vue({
+	data:{a:2},
+	computed:{
+		aDouble:function(){
+			return this.a *2
+		},
+		aPlus:{
+			get:function(){
+				return this.a+1
+			},
+			set:function(v){
+				this.a = v-1
+			}
+		}
+	}
+})
+
+console.log(vm.aDouble); //得用vm.aDouble vm.aDouble() is not a function
+console.log(vm.aPlus);
+vm.aPlus = 3;
+console.log(vm.a);
+
+
+var demo = new Vue({
+  el: '#demo'
+});
+</script>
+</html>
