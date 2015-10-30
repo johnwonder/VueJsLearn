@@ -1,0 +1,44 @@
+<html>
+<head>
+<script src="vue.js"></script>
+
+
+</head>
+<body>
+<div id="demo">
+   <my-component></my-component>
+
+<param-demo size="100" my-message="hello!"></param-demo>
+
+<prop-validation-demo size="hello">
+</prop-validation-demo>
+</div>
+ 
+</body>
+ <script>
+var vm = new Vue({
+
+ data:{a:1},
+ methods:{
+ 	plus:function(){
+ 		this.a++;
+ 	},
+ 	hello:function()
+ 	{
+ 		console.log("hello vue")
+ 	}
+
+ }
+
+});
+
+vm.plus();
+vm.hello();
+console.log(vm.a)//2
+
+
+var demo = new Vue({
+  el: '#demo'
+});
+</script>
+</html>
