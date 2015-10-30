@@ -1,12 +1,12 @@
  <html>
    <head>
-        <title>表单提交</title>
-		<script src="node_modules/vue-strap/node_modules/vue/dist/vue.js"></script>
+<title>vue-strap组件</title>
+<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<script src="node_modules/vue-strap/node_modules/vue/dist/vue.js"></script>
 <script src="node_modules/vue-strap/dist/vue-strap.js"></script>
 <script>
   var alert = VueStrap.alert
 </script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/custom/bootstrap.min.css" rel="stylesheet" type="text/css">
     </head>
  <body>
  <div id="demo">
@@ -66,10 +66,17 @@
 
  <script>
 //var alert = VueStrap.alert;
+var data={
+
+	showRight:false,
+	showTop :false
+};
+ 
 Vue.component('alert',alert);
 //一定要加 不然没有组件
 var demo = new Vue({
-  el: '#demo'
+  el: '#demo',
+  data:data//要加个data才显示
 });
 
 //Vue.component('Child', {
